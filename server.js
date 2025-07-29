@@ -39,11 +39,11 @@ app.locals.db = db;
 app.locals.admin = admin;
 
 // Rotas
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/terms', require('./routes/terms'));
-app.use('/api/appointments', require('./routes/appointments'));
-app.use('/api/reminders', require('./routes/reminders'));
-app.use('/api/ics', require('./routes/ics'));
+app.use('/api/auth', require('./Routes/auth'));
+app.use('/api/terms', require('./Routes/terms'));
+app.use('/api/appointments', require('./Routes/appointments'));
+app.use('/api/reminders', require('./Routes/reminders'));
+app.use('/api/ics', require('./Routes/ics'));
 
 // Rota raiz
 app.get('/', (req, res) => {
