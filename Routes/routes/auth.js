@@ -1,7 +1,7 @@
 // Routes/auth.js
 const express = require('express');
 const router = express.Router();
-const verifyAuth = require('../Utils/verifyAuth');
+const verifyAuth = require('../utils/verifyAuth');
 
 router.get('/me', verifyAuth, async (req, res) => {
   const user = req.user;
