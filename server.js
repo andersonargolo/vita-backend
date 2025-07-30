@@ -6,6 +6,8 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
 const admin = require('firebase-admin');
+const googleCalendarRoutes = require('./routes/googleCalendar');
+
 
 dotenv.config();
 
@@ -44,6 +46,8 @@ app.use('/api/terms', require('./routes/terms'));
 app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/reminders', require('./routes/reminders'));
 app.use('/api/ics', require('./routes/ics'));
+app.use('/api/google-calendar', googleCalendarRoutes);
+
 
 // Rota raiz
 app.get('/', (req, res) => {
