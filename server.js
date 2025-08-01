@@ -47,7 +47,7 @@ app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/reminders', require('./routes/reminders'));
 app.use('/api/ics', require('./routes/ics'));
 app.use('/api/google-calendar', googleCalendarRoutes);
-
+app.use('/api/profissionais', require('./routes/profissionais'));
 
 // Rota raiz
 app.get('/', (req, res) => {
